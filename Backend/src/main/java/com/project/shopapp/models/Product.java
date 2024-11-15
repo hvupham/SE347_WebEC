@@ -15,7 +15,11 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 //Event-driven approach with Spring Data JPA
+<<<<<<< HEAD
 @EntityListeners(ProductListener.class)
+=======
+//@EntityListeners(ProductListener.class)
+>>>>>>> c5c6824916064946fedd6ae8d711a052fc9c0cdc
 public class Product extends BaseEntity{
 
     @Id
@@ -37,9 +41,12 @@ public class Product extends BaseEntity{
     @JoinColumn(name = "category_id")
     private Category category;
 
+<<<<<<< HEAD
     @Column(name = "color")
     private String color;
 
+=======
+>>>>>>> c5c6824916064946fedd6ae8d711a052fc9c0cdc
     @OneToMany(mappedBy = "product",
             cascade = CascadeType.ALL,
             fetch = FetchType.LAZY)

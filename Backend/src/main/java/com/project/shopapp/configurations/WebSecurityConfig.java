@@ -1,9 +1,12 @@
 package com.project.shopapp.configurations;
 
 import com.project.shopapp.filters.JwtTokenFilter;
+<<<<<<< HEAD
 import com.project.shopapp.repositories.EmailRepository;
 import com.project.shopapp.services.Email.EmailService;
 import com.project.shopapp.services.Facebook.FacebookService;
+=======
+>>>>>>> c5c6824916064946fedd6ae8d711a052fc9c0cdc
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -37,10 +40,13 @@ import static org.springframework.security.config.Customizer.withDefaults;
 @RequiredArgsConstructor
 public class WebSecurityConfig {
     private final JwtTokenFilter jwtTokenFilter;
+<<<<<<< HEAD
     private final EmailService emailService;
     private final FacebookService facebookService;
     private final EmailRepository emailRepository;
 
+=======
+>>>>>>> c5c6824916064946fedd6ae8d711a052fc9c0cdc
 
     @Value("${api.prefix}")
     private String apiPrefix;
@@ -53,10 +59,17 @@ public class WebSecurityConfig {
                 .sessionManagement(c -> c.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(requests -> {
                     requests
+<<<<<<< HEAD
                             .anyRequest().permitAll(); // Bạn có thể thay đổi cấu hình này để yêu cầu xác thực cho các endpoint cụ thể
                 })
                 .oauth2Login(withDefaults())
                 .addFilterBefore(jwtTokenFilter, UsernamePasswordAuthenticationFilter.class); // Thêm filter JWT
+=======
+                            .anyRequest().permitAll();
+                })
+                .oauth2Login(withDefaults())
+                .addFilterBefore(jwtTokenFilter, UsernamePasswordAuthenticationFilter.class);
+>>>>>>> c5c6824916064946fedd6ae8d711a052fc9c0cdc
 
         http.cors(Customizer.withDefaults());
 
@@ -77,4 +90,8 @@ public class WebSecurityConfig {
 
         return http.build();
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> c5c6824916064946fedd6ae8d711a052fc9c0cdc
 }

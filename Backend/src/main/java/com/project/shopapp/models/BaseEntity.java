@@ -1,7 +1,10 @@
 package com.project.shopapp.models;
 
+<<<<<<< HEAD
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
+=======
+>>>>>>> c5c6824916064946fedd6ae8d711a052fc9c0cdc
 import jakarta.persistence.Column;
 import jakarta.persistence.MappedSuperclass;
 import jakarta.persistence.PrePersist;
@@ -17,7 +20,11 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @MappedSuperclass
 
+<<<<<<< HEAD
 public class BaseEntity{
+=======
+public class BaseEntity {
+>>>>>>> c5c6824916064946fedd6ae8d711a052fc9c0cdc
     @Column(name = "created_at")
     //@JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", timezone = "UTC")
     private LocalDateTime createdAt;
